@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* estilos generales */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/* estilos cabecera */
+header {
+  background-color: whitesmoke;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;  
+  padding: 1rem 4rem;
+}
+
+header .divImagenLogo {
+  width: 100px;
+}
+
+header .divImagenLogo img{
+  width: 100%;
+  object-fit: cover;
+}
+
+header .divRedes a img {
+  width: 20px;
+  height: 20px;
+}
+
+header .divRedes a .imagenInstagram {
+  margin-right: 0.2rem;
+}
+
+header .navegacion ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+
+
+header .navegacion ul li {
+  list-style: none;
+  padding: 0.3rem;
+  /* margin: 10px; */
+  background-color: rgb(46, 85, 165);
+  color: whitesmoke;
+}
+
+header .navegacion ul li a {
+  text-transform: uppercase;
+  font-size: large;
+  color: whitesmoke;
+}
+
+/* estilo menu actual */
+header .navegacion ul .itemActual{
+  background-color: whitesmoke;
+}
+
+header .navegacion ul .itemActual a{
+  color: rgb(46, 85, 165);
+  padding: 0.2rem;
+  /* margin: 10px; */
+  border: 0.15rem dashed;
+}
+
+/* estilos main */
+main{
+    display:grid;
+    grid-template-rows:   1fr 0.2fr 1fr;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    column-gap: 2rem;
+    grid-template-areas: 
+    "banner banner"
+    "titulo titulo"
+    "imagenProducto textoProducto";
+}
+
+main .imagenBanner{
+  grid-area: banner;
+  object-fit:cover;
+  width: 100%;
+  height: 80%;
+  align-self: start; 
+}
+
+main .tituloProducto{
+  grid-area: titulo;
+  justify-self: center;
+  font-size: 2rem;
+}
+
+main .imagenProducto{
+ grid-area: imagenProducto; 
+ justify-self: end;
+ width: 80%;
+}
+
+main .textoProducto{
+  grid-area: textoProducto;
+  text-align: left;
+  padding-right: 12.5rem;
+  font-size: 1rem;
+ }
+
+ /* estilos mobile */
+
+ @media screen and (min-width:600px){
+  
+  body{
+    background-color: tomato;
+  }
+
+}
