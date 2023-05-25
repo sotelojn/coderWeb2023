@@ -14,7 +14,8 @@ a:visited {
   text-decoration: none;
 }
 
-/* estilos cabecera */
+/* estilos desktop */
+/* estilos cabecera todos los html*/
 header {
   background-color: whitesmoke;
   display: flex;
@@ -75,7 +76,7 @@ header .navegacion ul .itemActual a {
   border: 0.15rem dashed;
 }
 
-/* estilos .mainIndex */
+/* estilos index */
 .mainIndex {
   display: grid;
   grid-template-rows: 1fr 0.2fr 1fr;
@@ -115,6 +116,20 @@ header .navegacion ul .itemActual a {
   font-size: 1rem;
 }
 
+/* estilos contacto.html*/
+.mainContacto form{
+  width: 30%;
+  margin: 4rem;
+}
+
+.mainContacto form #ejemploMail{
+  margin: 1rem;
+}
+
+.mainContacto form #ejemploApellidoNombre{
+  margin: 1rem;
+}
+
 /* estilos tablet */
 
 @media screen and (max-width: 900px) {
@@ -150,6 +165,12 @@ header .navegacion ul .itemActual a {
     margin-left: 10rem;
     margin-top: 2rem;
 
+  }
+
+  /* estilos contactos tablet*/
+  .mainContacto form{
+    width: 70%;
+    margin: 4rem;
   }
 }
 
