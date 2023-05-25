@@ -20,7 +20,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
   padding: 1rem 4rem;
 }
 
@@ -28,7 +28,7 @@ header .divImagenLogo {
   width: 100px;
 }
 
-header .divImagenLogo img{
+header .divImagenLogo img {
   width: 100%;
   object-fit: cover;
 }
@@ -44,10 +44,9 @@ header .divRedes a .imagenInstagram {
 
 header .navegacion ul {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   gap: 0.5rem;
 }
-
 
 header .navegacion ul li {
   list-style: none;
@@ -55,6 +54,7 @@ header .navegacion ul li {
   /* margin: 10px; */
   background-color: rgb(46, 85, 165);
   color: whitesmoke;
+  text-align: center;
 }
 
 header .navegacion ul li a {
@@ -64,63 +64,114 @@ header .navegacion ul li a {
 }
 
 /* estilo menu actual */
-header .navegacion ul .itemActual{
+header .navegacion ul .itemActual {
   background-color: whitesmoke;
 }
 
-header .navegacion ul .itemActual a{
+header .navegacion ul .itemActual a {
   color: rgb(46, 85, 165);
   padding: 0.2rem;
   /* margin: 10px; */
   border: 0.15rem dashed;
 }
 
-/* estilos main */
-main{
-    display:grid;
-    grid-template-rows:   1fr 0.2fr 1fr;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    column-gap: 2rem;
-    grid-template-areas: 
+/* estilos .mainIndex */
+.mainIndex {
+  display: grid;
+  grid-template-rows: 1fr 0.2fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 2rem;
+  grid-template-areas:
     "banner banner"
     "titulo titulo"
     "imagenProducto textoProducto";
 }
 
-main .imagenBanner{
+.mainIndex .imagenBanner {
   grid-area: banner;
-  object-fit:cover;
+  object-fit: cover;
   width: 100%;
   height: 80%;
-  align-self: start; 
+  align-self: start;
 }
 
-main .tituloProducto{
+.mainIndex .tituloProducto {
   grid-area: titulo;
   justify-self: center;
   font-size: 2rem;
 }
 
-main .imagenProducto{
- grid-area: imagenProducto; 
- justify-self: end;
- width: 80%;
+.mainIndex .imagenProducto {
+  grid-area: imagenProducto;
+  justify-self: end;
+  width: 80%;
 }
 
-main .textoProducto{
+.mainIndex .textoProducto {
   grid-area: textoProducto;
   text-align: left;
   padding-right: 12.5rem;
   font-size: 1rem;
- }
+}
 
- /* estilos mobile */
+/* estilos tablet */
 
- @media screen and (min-width:600px){
+@media screen and (max-width: 900px) {
   
-  body{
-    background-color: tomato;
+  header{
+    padding: 1rem;
   }
+
+  
+  header .navegacion ul {
+    flex-flow: column wrap;
+  }
+
+  header .navegacion ul li a {
+    font-size: 0.9rem;
+  }
+
+  .mainIndex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainIndex .tituloProducto {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  .mainIndex .textoProducto{
+    text-align: center;
+    margin-left: 10rem;
+    margin-top: 2rem;
+
+  }
+}
+
+/* estilos celulares */
+
+@media screen and (max-width: 500px) {
+  
+  
+  header .navegacion ul li {
+    padding: 0.2rem;
+    /* margin: 10px; */
+    background-color: rgb(46, 85, 165);
+  }
+  
+  header .navegacion ul li a {
+    font-size: 0.7rem;
+  }
+
+  header .navegacion ul .itemActual a {
+    padding: 0.2rem;
+  }
+
+
 
 }
