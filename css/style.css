@@ -14,6 +14,13 @@ a:visited {
   text-decoration: none;
 }
 
+main{
+  font-family: 'Quicksand', sans-serif;
+}
+
+header{
+  font-family: 'Quicksand', sans-serif;
+}
 /* estilos desktop */
 /* estilos cabecera todos los html*/
 header {
@@ -101,6 +108,7 @@ header .navegacion ul .itemActual a {
   grid-area: titulo;
   justify-self: center;
   font-size: 2rem;
+  color: rgb(46, 85, 165);
 }
 
 .mainIndex .imagenProducto {
@@ -130,8 +138,18 @@ header .navegacion ul .itemActual a {
   margin: 1rem;
 }
 
-/* estilos tablet */
+/* estilos puntosVentas.html*/
 
+.mapa{
+  margin: 3rem;
+}
+
+.mapa h2{
+  color:rgb(46, 85, 165);
+  margin: 1rem 0rem;
+}
+
+/* estilos tablet */
 @media screen and (max-width: 900px) {
   
   header{
